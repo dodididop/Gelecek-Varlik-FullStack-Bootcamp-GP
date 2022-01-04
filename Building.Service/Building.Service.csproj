@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Flat\" />
+    <None Remove="User\" />
+    <None Remove="Payment\" />
+    <None Remove="Message\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Flat\" />
+    <Folder Include="User\" />
+    <Folder Include="Payment\" />
+    <Folder Include="Message\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Building.DB\Building.DB.csproj" />
+    <ProjectReference Include="..\Building.Model\Building.Model.csproj" />
+  </ItemGroup>
+</Project>
