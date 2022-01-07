@@ -16,4 +16,7 @@
     <Folder Include="Payment\" />
     <Folder Include="User\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Building.DB\Building.DB.csproj" />
+  </ItemGroup>
 </Project>

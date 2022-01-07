@@ -11,7 +11,7 @@ namespace Building.DB.Entities
         public int FromUserId { get; set; }
         public int ToUserId { get; set; }
         public DateTime SendDate { get; set; }
-        public bool IsRead { get; set; }
+        public bool IsRead { get; set; } = false;
 
         public virtual Users FromUser { get; set; }
         public virtual Users ToUser { get; set; }

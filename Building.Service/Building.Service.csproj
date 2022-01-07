@@ -9,6 +9,7 @@
     <None Remove="User\" />
     <None Remove="Payment\" />
     <None Remove="Message\" />
+    <None Remove="AutoMapper" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Flat\" />
@@ -19,5 +20,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Building.DB\Building.DB.csproj" />
     <ProjectReference Include="..\Building.Model\Building.Model.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
   </ItemGroup>
 </Project>
