@@ -5,7 +5,7 @@ Briefly, created web api and LoginFilter attribute, filtering, sorting and pagin
 ## Table of contents
 * [General-info](#general-info)
 * [Technologies](#technologies)
-* [To Do](#toDos)
+* [To Do](#toDo)
 
 
 ## General-info
