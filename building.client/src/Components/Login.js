@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
+import  {useNavigate}  from "react-router-dom";
+
 
 const Login = () => {
+  
   const [data, setData] = useState({
     email: "",
-    password: ""
+    password: "",
+    
   });
 
   const handleChange = (e) => {
@@ -20,14 +24,15 @@ const Login = () => {
     const userData = {
       email: data.email,
       password: data.password
+     
     };
+    
     axios.post("http://localhost:5000/api/Login", userData).then((response) => {
-      console.log(response.status);
-      console.log(response.data);
+      localStorage.setItem('token', response.data)
       setData({
         email: "",
         password: ""
-      })
+      }) 
     }).catch((error) => {
         if (error.response) {
           console.log(error.response);
@@ -38,8 +43,9 @@ const Login = () => {
           console.log(error);
         }
       });
+     
   };
-
+  
   return (
     <div>
       <h3>Oturum Açın</h3>
@@ -62,7 +68,8 @@ const Login = () => {
             onChange={handleChange}
           />
         </label><br />
-        <button type="submit">Oturum Aç</button>
+        
+        <button name= 'Oturum Aç' type="submit">Oturum Aç</button> 
       </form>
     </div>
   );
